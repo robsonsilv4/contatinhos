@@ -1,3 +1,4 @@
+import 'package:contatinhos/ui/screens/message_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/models/users.dart';
@@ -69,6 +70,14 @@ class HomeScreen extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       trailing: Text('ONTEM'),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => MessageScreen(
+                            users: users,
+                          ),
+                        ),
+                      ),
                     );
                   },
                 );
